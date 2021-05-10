@@ -6,7 +6,7 @@ public class Dataset implements Searchable, Sortable {
 
     public Dataset() {
         DataVisualizationApp app = DataVisualizationApp.getApp();
-        Table table = app.loadTable("data/covid-19-cases-and-deaths.csv", "header");
+        Table table = app.loadTable("data/tabularData.csv", "header");
         records = new Record[table.getRowCount()];
         for (int i = 0; i < records.length; i++) {
             TableRow row = table.getRow(i);
