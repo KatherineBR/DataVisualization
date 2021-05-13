@@ -15,7 +15,7 @@ public class DataVisualizationApp extends PApplet {
     }
 
     public void settings(){
-        size(1000, 600);
+        size(1000, 1000);
     }
 
     public void setup(){
@@ -30,7 +30,7 @@ public class DataVisualizationApp extends PApplet {
 
     public void keyPressed(){
         if (key == 'e'){
-            foundAt = dataset.find("india");
+            foundAt = dataset.find(200401);
         } else if (key == 'o'){
             dataset.sort();
         }
@@ -42,24 +42,28 @@ public class DataVisualizationApp extends PApplet {
 
     private void displayRecords(){
         Record[] records = dataset.getRecords();
-        text("COUNTRY", 200, 25);
-        text("TOTAL INFECTIONS", 400, 25);
-        text("DAILY NEW", 600, 25);
-        text("TOTAL DEATHS", 800, 25);
+        text("DATE", 125, 25);
+        text("TEDDY BEAR", 275, 25);
+        text("RUBBER DUCK", 425, 25);
+        text("DOLLHOUSE", 575, 25);
+        text("LEGOS", 725, 25);
+        text("DRONE", 875, 25);
         int y = 75;
         for (int i = 0; i < records.length; i++){
             Record record = records[i];
 
             if (foundAt == i){
-                fill(255, 0, 0);
+                fill(255, 0, 0); //red
             }
-            text(record.getCountry(), 200, y);
+            text(record.getDate(), 150, y);
 
-            fill(0);
-            text(record.getDeaths(), 400, y);
-            text(record.getInfections(), 600, y);
-            text(record.getNewCases(), 800, y);
-            y += 50;
+            fill(0); //black
+            text(record.getTeddyBear(), 300, y);
+            text(record.getRubberDucks(), 450, y);
+            text(record.getDollHouse(), 600, y);
+            text(record.getLegos(), 750, y);
+            text(record.getDrone(), 900, y);
+            y += 25;
         }
     }
 }
