@@ -10,7 +10,6 @@ public class SortingMethods {
     }
 
     private static void selectionSort(Record[] records) { //sorting by date
-        //Record[] temp = new Record[records.length];
         Record temp;
         int min = 0;
         int low;
@@ -78,10 +77,10 @@ public class SortingMethods {
             // and add it to the result array first. Then, add the larger.
             while (firstIndex < firstHalf.length && secondIndex < secondHalf.length)
             {
-                if (firstHalf[firstIndex].getDate() < secondHalf[secondIndex].getDate())
+                if (firstHalf[firstIndex].getDate() < secondHalf[secondIndex].getDate()) //checking which date is later
                 {
-                    result[resultIndex] = firstHalf[firstIndex];
-                    firstIndex++;
+                    result[resultIndex] = firstHalf[firstIndex]; //assigning the lowest into the final array
+                    firstIndex++; //move along the not inserted half
                 }
                 else
                 {
