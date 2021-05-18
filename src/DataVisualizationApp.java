@@ -30,7 +30,7 @@ public class DataVisualizationApp extends PApplet {
 
     public void keyPressed(){
         if (key == 'e'){
-            foundAt = dataset.find(200401);
+            foundAt = dataset.find(200401); //returns the date
         } else if (key == 'o'){
             dataset.sort();
         }
@@ -55,14 +55,14 @@ public class DataVisualizationApp extends PApplet {
             if (foundAt == i){
                 fill(255, 0, 0); //red
             }
-            text(record.getDate(), 150, y);
+            text(record.getDate(), 125, y);
 
             fill(0); //black
-            text(record.getTeddyBear(), 300, y);
-            text(record.getRubberDucks(), 450, y);
-            text(record.getDollHouse(), 600, y);
-            text(record.getLegos(), 750, y);
-            text(record.getDrone(), 900, y);
+            text(record.getTeddyBear(), 275, y);
+            text(record.getRubberDucks(), 425, y);
+            text(record.getDollHouse(), 575, y);
+            text(record.getLegos(), 725, y);
+            text(record.getDrone(), 875, y);
             y += 25;
         }
     }
