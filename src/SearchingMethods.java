@@ -20,7 +20,7 @@ public class SearchingMethods {
     private static int binarySearch(Record[] records, int date) {
         int low = 0;
         int high = records.length;
-        while (low < high){
+        while (low <= high){
             int middle = (low + high)/2;
             if (records[middle].getDate() < date){ //too small
                 low = middle + 1;
