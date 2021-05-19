@@ -30,13 +30,13 @@ public class SortingMethods {
 
     private static void insertionSort(Record[] records) {
         for (int i = 1; i < records.length; i++){
+            Record temp = records[i];
             int place = i - 1;
-            while (place >= 0 && records[i].getDate() < records[place].getDate()){ //while the index is smaller than before it
+            while (place >= 0 && records[place].getDate() > temp.getDate()){ //while the index is smaller than before it
+                records[place+1] = records[place];
                 place--;
             }
-            Record temp = records[place + 1];
-            records[place + 1] = records[i];
-            records[i] = temp;
+            records[place + 1] = temp;
         }
     }
 
