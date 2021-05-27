@@ -1,3 +1,5 @@
+import processing.core.PImage;
+
 public class Record {
     private final int date; //note to self: made these all final
     private final int teddyBear;
@@ -13,6 +15,14 @@ public class Record {
         this.dollHouse = dollHouse;
         this.legos = legos;
         this.drone = drone;
+    }
+
+    public void display(PImage img){
+//        image(droneImg, 0, 0);
+//        image(legoImg, width/5, 0);
+//        image(houseImg, 2*(width/5), 0);
+//        image(duckImg, 3*(width/5), 0);
+//        image(bearImg, 4*(width/5), 0);
     }
 
     public int getDate(){ return date; }

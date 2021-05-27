@@ -4,9 +4,9 @@ public class SortingMethods {
     }
 
     public static void sort(Record[] records){
-        SortingMethods.selectionSort(records);
+        //SortingMethods.selectionSort(records);
         //SortingMethods.insertionSort(records);
-        //SortingMethods.mergeSort(records);
+        SortingMethods.mergeSort(records);
     }
 
     private static void selectionSort(Record[] records) { //sorting by date
