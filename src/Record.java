@@ -17,14 +17,6 @@ public class Record {
         this.drone = drone;
     }
 
-    public void display(PImage img){
-//        image(droneImg, 0, 0);
-//        image(legoImg, width/5, 0);
-//        image(houseImg, 2*(width/5), 0);
-//        image(duckImg, 3*(width/5), 0);
-//        image(bearImg, 4*(width/5), 0);
-    }
-
     public int getDate(){ return date; }
 
     public int getTeddyBear() {
